@@ -1,0 +1,11 @@
+{
+  "name": "@steveush/create-plugin",
+  "version": "0.0.1",
+  "description": "Testing npm init <initializer>.",
+  "repository": "https://github.com/steveush/create-plugin",
+  "main": "index.js",
+  "bin": {
+    "create-plugin": "bin/cli.js"
+  },
+  "dependencies": {}
+}
