@@ -90,7 +90,7 @@ app.ask(questions).then((answers) => {
 }).then((files) => {
     if (options.verbose) console.log("processed: ", files);
     console.log("installing dependencies...");
-    return app.install(root_path, "@steveush/gulp-tasks", "@wordpress/scripts", "gulp");
+    return app.install(root_path, "@steveush/gulp-tasks@latest", "@wordpress/scripts@latest", "gulp@latest", "postcss@latest");
 }).then(() => {
     console.log("run gulp to build the repo!");
 }).catch((err) => {

@@ -1,22 +1,14 @@
 module.exports = {
     "blocks": [
-        "./src/blocks/index.js --output-path=./assets/blocks",
-        "./src/blocks/index.pro.js --output-path=./assets/pro/blocks"
+        "./src/blocks/js/index.js --output-path=./assets/blocks",
+        "./src/blocks/js/index.pro.js --output-path=./assets/pro/blocks"
     ],
     "clean": [
         "./assets/admin/**/*",
         "./assets/public/**/*",
+        "./assets/blocks/**/*",
         "./releases/<%= name %>.v<%=version%>.zip"
     ],
-    "copy": {
-        "./src/public/js/__utils.js": {
-            "options": {
-                "match": /FooUtils/g,
-                "replacement": "{$config.namespace}.utils"
-            },
-            "files": ["./node_modules/foo-utils/dist/foo-utils.js"]
-        }
-    },
     "scss": {
         "./assets/public/css/<%= name %>.css": "./src/public/scss/index.scss",
         "./assets/pro/public/css/<%= name %>.css": "./src/public/scss/index.pro.scss",
@@ -70,7 +62,7 @@ module.exports = {
         }
     },
     "zip": {
-        "./releases/{$name}.v<%=version%>.zip": [
+        "./releases/<%= name %>.v<%=version%>.zip": [
             "**/*",
             "!package*.json",
             "!./{node_modules,node_modules/**/*}",
