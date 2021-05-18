@@ -6,3 +6,6 @@ node_modules/
 
 #ignore phpstorm config folder
 .idea/
+
+#ignore test folder
+.test/

@@ -1,0 +1,22 @@
+{
+  "name": "{{name}}",
+  "version": "{{version}}",
+  "license": "{{license}}",
+  "title": "{{title}}",
+  "description": "{{description}}",
+  "repository": "{{repository}}",
+  "bugs": "{{bugs}}",
+  "author": {
+    "name": "{{author.name}}",
+    "email": "{{author.email}}"
+  },
+  "config": {
+    "namespace": "{{config.namespace}}"
+  },
+  "scripts": {
+    "default": "gulp",
+    "develop": "gulp develop",
+    "compile": "gulp compile",
+    "deploy": "gulp deploy"
+  }
+}
